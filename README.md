@@ -1,6 +1,6 @@
-# rclone-shell-bot
+# fclone-shell-bot
 
-<img src="https://github.com/cgkings/gclone_shell_bot/blob/master/images/chat1.jpg" height="470px" width="457px">
+<img src="https://github.com/cgkings/gclone_shell_bot/blob/master/images/bot.gif" height="470px">
 
 **注意:** 暂时不支持windows.
 
@@ -63,40 +63,58 @@ node server
 <details>
 <summary>步骤五：安装fclone</summary>
 
-[fclone](https://github.com/mawaya/rclone) 
-
-一键安装命令：
-
+[fclone发布地址页](https://github.com/mawaya/rclone) <br>
+一键安装命令：<br>
+```
+wget https://raw.githubusercontent.com/cgkings/fclone_shell_bot/master/fclone/fclone.zip && unzip fclone.zip && mv fclone /usr/bin && chmod +x /usr/bin/fclone && fclone version
 ```
 
-```
+作者是TG上的@fxxkrlab（F佬）和@Ip2N5M（K佬），都是很热心的人，小白的福音，欢迎大家去TG上骚扰他们，他们非常渴望你们的小白问题！
 
-这位大佬，是个有技术的懒人，小白的福音啊，用他的gclone可以简化sa切换日志内容，其他还有很多功能，自己去瞻仰下吧
+fclone的优势？其实没啥优势，就是比现存所有转存工具快个几十倍吧，速度见下图：
 
-当然如果你能忍受纷繁而无意义的sa切换日志，此步骤可以省略，如果过几天我对应性修改了懒人一键脚本的ID提取，那么这步就不能省略
+<img src="https://raw.githubusercontent.com/cgkings/fclone_shell_bot/master/images/spead.png"><br>
 
+这张图是盗的TG上@asuka8，内测群里有名的快枪手！
+
+<img src="https://github.com/cgkings/fclone_shell_bot/raw/master/images/speader.gif" width="800px" alt="速度图" ><br/>
+
+这是我自己的速度图，512M VPS性能不给力
+
+关于fclone,有啥问题除了问F佬和K佬，也可以加@asuka8和@waihoe89，他们都非常热心！
+
+另外，隆重介绍一下TG上的@Komeanx（Jason Wu），头像经常换，名字还没换过，TG中文圈有名的小白奸商（现在已经不干了），热心的免费帮我搭建gclone，从此进入转存脚本的不归路（不准确，其实是从黄屁股卖给我野鸡大学教育子号开始的，其实根本不用买，美国社区大学能免费申请的一大堆）。。。<br>
 </details>
 <details>
 <summary>步骤六：安装fclone一键转存脚本</summary>
 
 ```
+低配（128 256 5000）
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/cgkings/gclone-assistant/master/script/fclone/fcloneinstall.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/cgkings/fclone_shell_bot/master/script/fcloneinstall.sh)"
+
+高配（256 400 10000）
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/cgkings/fclone_shell_bot/master/script/fclone_high/fcloneinstall.sh)"
 
 ```
 
 [脚本配置教程](https://github.com/cgkings/gclone-assistant) 
 
-当你熟悉以后应该可以根据自己的需要修改脚本了，有问题TG找 onekingen，他在这个脚本的自定义道路上已经越走越（歪）远了，冉冉升起的小白大神
+当你熟悉以后应该可以根据自己的需要修改脚本了，有问题TG找 @onekings，他在这个脚本的自定义道路上已经越走越（歪）远了，冉冉升起的小白大神
+你要是不在TG上找他问几个小白问题，就是不尊重他！
 
 </details>
 <details>
-<summary>步骤七：配置bot</summary>
+<summary>步骤七：使用转存bot</summary>
 
-其实如果你能忍受，每次向bot输入/gd的话，这步可以省略<br>
-如果你跟我一样懒，请往下看<br>
-如果你比我还懒，别看教程了，打开代码，试着修改一下，你能实现更多你自己想要的功能，这里给大家介绍一位不愿透漏姓名的大神fxxkrlab的 [转存bot教材](https://github.com/fxxkrlab/iCopy) ，你研究透了，就该我膜拜你了 <br>
- ok,说了这么多，其实是因为这一步很短，google或者百度bot自定义命令或者自定义命令按钮，你就可以实现在bot上点"/"弹出/gd,点它启动一键转存脚本，或者是点一下bot按钮就启动，说的不具体是因为我也不太懂，非常期待你的bot按钮拉取消息
+1、向bot输入/gd
+  
+  注：你也可以在TG找@BotFather，输入/setcommands，定义命令列表，这样你就可以在转存bot上点击“/”，选择“/gd”
+
+2、在bot弹出信息“请输入你的分享链接”回复你要转存的分享链接
+
+剩下的按图示操作就行，注意，所以需要输入的内容，必须在带“🔸”符号原信息回复方有效
 
 </details>
 
